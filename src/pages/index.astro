@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Vera from "../components/Vera.astro";
+import VeraTree from "../components/VeraTree.astro";
 ---
 
 <Layout>
@@ -7,56 +10,105 @@ import Layout from '../layouts/Layout.astro';
   <!-- Hero -->
   <section class="bg-gray-50 py-24 text-center">
     <div class="max-w-6xl mx-auto px-4">
-      <!-- <h1 class="text-5xl font-extrabold text-gray-900 mb-6">The Power of Big Data in a Lean Package</h1>
-      <h1 class="font-['Poppins'] text-5xl font-extrabold">The Power of Big Data in a Lean Package</h1>
-      -->
-      <h1 class="font-['Raleway'] text-8xl font-bold">The Power of Big Data...</h1>
-      <!--
-      <h1 class="font-['Montserrat'] text-5xl font-extrabold">The Power of Big Data in a Lean Package</h1>
-      <h1 class="font-['Oswald'] text-6xl font-bold">The Power of Big Data in a Lean Package</h1>
-      -->
+      <h1 class="font-['Raleway'] text-8xl text-gray-600 font-bold">The Power of Big Data...</h1>
+      <br><br>
+      <h2 class="text-6xl font-bold text-center text-gray-900 mb-8">Now Available in All Sizes!</h2>
       <br>
-      <p class="text-xl text-gray-600 mb-10">
-        Now Available in All Sizes!!!
-      </p>
       <div class="flex justify-center gap-4">
-        <a href="#features" class="px-8 py-3 bg-blue-600 text-white text-lg rounded-lg shadow hover:bg-blue-700 transition">
-          Get Started
-        </a>
-        <a href="#learn-more" class="px-8 py-3 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">
-          Learn More
-        </a>
+        <a href="individuals" class="px-8 py-3 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">For Individuals</a>
+        <a href="teams" class="px-8 py-3 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">For Teams</a>
+        <a href="leaders" class="px-8 py-3 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">For Leaders</a>
       </div>
     </div>
   </section>
 
-  <!-- Features -->
-  <section id="features" class="py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Choose the Best Vera for You...</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <a href="/personal" class="block p-8 border rounded-lg shadow-sm hover:shadow-md transition hover:-translate-y-1 hover:bg-gray-50">
-          <div class="text-4xl mb-4">⚡</div>
-          <h3 class="font-bold text-xl mb-2">VeraPersonal</h3>
-          <p class="text-gray-600">Get up and running in minutes with our simple integration.</p>
-        </a>
-        <a href="/team" class="block p-8 border rounded-lg shadow-sm hover:shadow-md transition hover:-translate-y-1 hover:bg-gray-50">
-          <div class="text-4xl mb-4">⚡</div>
-          <h3 class="font-bold text-xl mb-2">VeraProjects</h3>
-          <p class="text-gray-600">Get up and running in minutes with our simple integration.</p>
-        </a>
-        <a href="/align" class="block p-8 border rounded-lg shadow-sm hover:shadow-md transition hover:-translate-y-1 hover:bg-gray-50">
-          <div class="text-4xl mb-4">⚡</div>
-          <h3 class="font-bold text-xl mb-2">VeraAlign</h3>
-          <p class="text-gray-600">Get up and running in minutes with our simple integration.</p>
-        </a>
-        <a href="/startup" class="block p-8 border rounded-lg shadow-sm hover:shadow-md transition hover:-translate-y-1 hover:bg-gray-50">
-          <div class="text-4xl mb-4">⚡</div>
-          <h3 class="font-bold text-xl mb-2">VeraStartup</h3>
-          <p class="text-gray-600">Get up and running in minutes with our simple integration.</p>
-        </a>
+<section class="bg-white py-24">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <!-- Left -->
+      <div class="p-2 order-2 md:order-1">
+        <p class="text-lg text-gray-700">
+          [a physcial representation of what Big Data Sprawl & Decentralized Ownership.  This image is labeled something like: Big Data Sprawl.  One possible image we could use is a business park with buildings customized to Big Data Players.  In the plaza of the business park, show a bunch of faceless people wheeling and dealing in everyone's data]
+          <br><br>
+          [Around the image you can have labels with arrows or talk bubbles that read: "-> Data In", "Data Out ->", "LLM", "Forcasting", "DataOps", "DevOps", "Version Control", "Acid Transactions", etc.  The point of these labels are to show 2 things..1) At the end of the day Big Data and vera are doing the same simple things with the same tooling, and 2) We're more nimble and lean then they are]
+        </p>
+      </div>
+
+      <!-- Middle -->
+      <div class="p-2 order-1 md:order-2">
+          <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">What is <Vera />?</h2>
+          <p class="text-lg text-gray-700"><Vera /> is a Data Engine.  It shrinks down AI, Business Intelligence & Data Management tools so that they can be run locally by anyone.</p>
+          <br>
+          <p class="text-lg text-gray-700">The Personal Data Computing golden age is here?</p>
+      </div>
+
+      <!-- Right -->
+      <div class="p-2 order-3 md:order-3">
+        <p class="text-lg text-gray-700">
+          [a physcial representation of what vera might look like.  This image is labeled something like: Lean Data Machine.<br><br>Possible idea...a rough drawing of square box that represents a Lakehouse with a rectangle box on top of it that represents AI/GPU]
+          <br><br>
+          [Around the image you can have labels with arrows or talk bubbles that read: "-> Data In", "Data Out ->", "LLM", "Forcasting", "DataOps", "DevOps", "Version Control", "Acid Transactions", etc.  The point of these labels are to show 2 things..1) At the end of the day Big Data and vera are doing the same simple things with the same tooling, and 2) We're more nimble and lean then they are]
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-24">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+      <div class="p-2 order-1 md:order-1">
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">What is <VeraTree />?</h2>
+        <p class="text-lg text-gray-700 mb-8"><VeraTree /> is an extension of <Vera />. It integrates your data into a KnowledgeGraph that sits on top of an already powerful data engine.</p>
+        <p class="text-lg text-gray-700 mb-8">If <Vera /> makes your data clean, fresh & AI-ified then <VeraTree />, by mapping it to a global semantic layer, makes your data valuable.</p>
+      </div>
+
+      <!-- Right cell (shows second on mobile, second on desktop) -->
+      <div class="p-2 order-2 md:order-2">
+        <p class="text-lg text-gray-700">
+           Possible idea...a rough drawing of square box that represents a Lakehouse with a rectangle box on top of it that represents AI/GPU with a tree growing out of it that represents a miniaturized GraphRag system
+          <br><br>
+          [Around the image you can have labels with arrows or talk bubbles that read: "-> Data In", "Data Out ->".  Then next to the Lakehouse part have an arrow pointing up that says "Data Quality" and then an arrow going up next to the Tree (Knowledge Graph) that says "Data Value"]
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Features -->
+<section id="features" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">
+      Choose your preferred data playground..
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Real cards below -->
+      <Card href="/individuals" icon="🗣️" buttonLabel="Learn more">
+        <span slot="title"><VeraTree /> for Individuals</span>
+        <li slot="description">For Individuals who want to integrate their KnowledgeGraphs...</li>
+        <li slot="description">Compare your Knowledge Graph with pre-loaded Graphs</li>
+        <li slot="description">Solves this Pain Point</li>
+      </Card>
+
+      <Card href="/teams" icon="🌱" buttonLabel="Learn more">
+        <span slot="title"><VeraTree /> for Teams</span>
+        <li slot="description">For Teams who...</li>
+        <li slot="description">Solves this Pain Point</li>
+        <li slot="description">Solves this Pain Point</li>
+      </Card>
+
+      <Card href="/leaders" icon="🌳" buttonLabel="Learn more">
+        <span slot="title"><VeraTree /> for Leaders</span>
+        <li slot="description">For Leaders who are...</li>
+        <li slot="description">Solves this Pain Point</li>
+        <li slot="description">Solves this Pain Point</li>
+      </Card>
+
+    </div>
+  </div>
+</section>
 
 </Layout>
