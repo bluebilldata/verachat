@@ -1,0 +1,71 @@
+---
+const { tabs = [], labels = [] } = Astro.props;
+let activeId = tabs[0];
+
+// Generate unique ID for this instance
+const uid = Math.random().toString(36).substring(2, 8);
+---
+
+<div class="tabs" id={`tabs-${uid}`}>
+  <!-- Tab headers -->
+  <div class="flex border-b">
+    {tabs.map((tab, index) => (
+      <button
+        class={`px-4 py-2 ${
+          tab === activeId
+            ? "border-b-2 border-blue-500 text-blue-600"
+            : "text-gray-600 hover:text-blue-600"
+        }`}
+        data-tab={tab}
+      >
+        {labels[index] || tab}
+      </button>
+    ))}
+  </div>
+
+  <!-- Tab panels - these will be populated by TabPanel components -->
+  <div class="tab-content">
+    <slot />
+  </div>
+</div>
+
+<script>
+  const container = document.currentScript.closest(".tabs");
+  const buttons = container.querySelectorAll("[data-tab]");
+  const panels = container.querySelectorAll(".tab-panel");
+
+  // Set initial active state
+  const activeTab = container.id.split("-")[1];
+  panels.forEach((panel, index) => {
+    if (index === 0) {
+      panel.classList.remove("hidden");
+    } else {
+      panel.classList.add("hidden");
+    }
+  });
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.dataset.tab;
+
+      // reset all buttons
+      buttons.forEach(b => {
+        b.classList.remove("border-b-2", "border-blue-500", "text-blue-600");
+        b.classList.add("text-gray-600");
+      });
+      
+      // reset all panels
+      panels.forEach(p => p.classList.add("hidden"));
+
+      // activate clicked button
+      btn.classList.remove("text-gray-600");
+      btn.classList.add("border-b-2", "border-blue-500", "text-blue-600");
+      
+      // show corresponding panel
+      const targetPanel = container.querySelector(`[data-panel="${targetId}"]`);
+      if (targetPanel) {
+        targetPanel.classList.remove("hidden");
+      }
+    });
+  });
+</script>

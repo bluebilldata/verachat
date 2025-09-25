@@ -1,30 +1,212 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Vera from "../components/Vera.astro";
+import VeraTree from "../components/VeraTree.astro";
+import FeatureCard from "../components/FeatureCard.astro";
+import PriceCard from "../components/PriceCard.astro";
+import QuoteCard from "../components/QuoteCard.astro";
+
 ---
+
+<style>
+  /* Hide the default marker */
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  details summary::marker {
+    display: none;
+  }
+</style>
 
 <Layout>
   <section class="py-10 bg-gray-50">
     <div class="max-w-6xl mx-auto px-6 text-left">
         <!-- Section label -->
-        <p class="text-sm font-semibold text-black-50 tracking-wider uppercase mb-2">
+        <p class="text-xs font-semibold text-gray-500 tracking-wider uppercase mb-2">
         Product
         </p>
-        <h1 class="text-5xl font-extrabold text-gray-900 mb-2">For Leaders</h1>
+        <h1 class="text-3xl font-extrabold text-gray-900 mb-2">For Leaders</h1>
         <!-- <p class="text-md text-gray-600 leading-relaxed mb-10 max-w-6xl">
         a little intro
         </p>-->
     </div>
   </section>
 
-  <section class="bg-white py-10">
-    <div class="max-w-6xl mx-auto px-10">
-      <p class="mb-6">
-      Blah blah blah
-      </p>
-      <p class="mb-6">
-      Blah blah blah
-      </p>
+<!-- Hero -->
+<section class="bg-white-50 py-14">
+  <div class="max-w-6xl pl-9 mx-auto px-4 text-left">
+    <div class="flex flex-col md:flex-row md:items-stretch md:justify-between gap-6">
+      
+      <!-- Left: h1 + h2 stacked -->
+      <div class="flex-1 flex flex-col justify-center">
+        <h1 class="font-['Raleway'] text-9xl text-gray-900 font-bold mb-4">
+          TrueAlign
+        </h1>
+        <h2 class="text-4xl font-serif text-gray-900 pl-5">
+          Track how team alignment affects impact over time.
+        </h2>
+      </div>
+      
+      <!-- Right: image -->
+      <div class="flex-shrink-0 flex items-center">
+        <img 
+          src="/images/graph.jpg" 
+          alt="TrueAlign" 
+          class="object-contain" 
+          style="height:100%; width:auto; max-height:280px;" 
+        />
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-10">
+  <div class="max-w-6xl mx-auto px-6 text-left relative px-10">
+    <!-- Flowing Text -->
+        <h2 class="text-2xl font-extrabold text-gray-900 mb-4">How it works?</h2>
+    <p class="text-xl text-gray-700 mb-4">
+      TrueAlign connects team conversations with business outcomes. VERAchat interviews capture how leaders and
+      team members view goals and challenges. These insights are loaded into a living knowledge
+      graph, showing where thinking aligns or diverges over time.
+    </p>
+    <p class="text-xl text-gray-700">
+      Operational data brings in milestones, metrics, and KPIs. Together, they reveal the cause-and-effect
+      between alignment and results, giving leaders a clear, measurable way to track progress and manage performance.
+    </p>
+  </div>
+</section>
+
+
+<section class="bg-gray-50 py-12">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-extrabold text-gray-900 mb-12">Product Features</h2>
+
+    <div class="grid grid-cols-1 gap-8">
+      <FeatureCard
+        title="Milestone Alignment"
+        description="See how your team’s ideas converge toward key project milestones and KPIs."
+        image="graph.jpg"
+      />
+
+      <FeatureCard
+        title="Vision Cohesion"
+        description="Measure how closely your team’s thinking aligns with company strategy over time."
+        image="graph.jpg"
+      />
+
+      <FeatureCard
+        title="Expert Alignment"
+        description="Compare your team’s approach against expert benchmarks and industry best practices."
+        image="graph.jpg"
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <QuoteCard
+        quote="Not finance. Not strategy. Not technology. It is teamwork that remains the ultimate competitive advantage."
+        author="Patrick Lencioni"
+        role="Author, The Five Dysfunctions of a Team"
+        image="/images/lencioni.png"
+      />
+
+      <QuoteCard
+        quote="Organizations learn only through individuals who learn. But individual learning does not guarantee organizational learning. Without integration, it is only potential."
+        author="Peter Senge"
+        role="Author, The Fifth Discipline"
+        image="/images/senge.png"
+      />
+    </div>
+
+    <FeatureCard
+        title="Influence Pathways"
+        description="Identify whose ideas consistently guide and shape the broader conversation."
+        image="graph.jpg"
+      />
+
+      <FeatureCard
+        title="Idea Development"
+        description="Watch early concepts evolve into refined, connected, and actionable insights."
+        image="graph.jpg"
+      />
+
+      <FeatureCard
+        title="Engagement Signals"
+        description="Spot patterns of contribution to understand who is driving progress."
+        image="graph.jpg"
+      />
+
+      <FeatureCard
+        title="Sentiment Trends"
+        description="Reveal optimism, concerns, and friction as they flow through your projects."
+        image="graph.jpg"
+      />
+
+      <FeatureCard
+        title="Risk Indicators"
+        description="Quickly detect misaligned efforts that may stall execution."
+        image="graph.jpg"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="bg-white-50 py-10">
+  <h2 class="text-4xl font-extrabold text-gray-900 mb-8 text-center">Book a Call</h2>
+  <p class="text-gray-600 mb-12 text-center">
+    Schedule a time to connect with our team and learn more about TrueAlign.
+  </p>
+
+  <!-- Full width Calendly -->
+  <div 
+    class="calendly-inline-widget w-full" 
+    data-url="https://calendly.com/sarah-bluebill/30min?primary_color=033b8b" 
+    style="height:700px;">
+  </div>
+
+  <script 
+    type="text/javascript" 
+    src="https://assets.calendly.com/assets/external/widget.js" 
+    async>
+  </script>
+</section>
+
+
+<section class="bg-gray-50 py-20">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-extrabold text-gray-900 mb-12">Pricing</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <PriceCard
+        title="Medium Box"
+        description="For growing teams that need more power and flexibility."
+        price="$9999"
+        features={[
+          "Unlimited projects",
+          "Advanced analytics",
+          "Priority support"
+        ]}
+        highlight={true}
+      />
+
+      <PriceCard
+        title="Large Box"
+        description="For enterprises needing scalability and dedicated support."
+        price="$9999"
+        features={[
+          "Custom integrations",
+          "Dedicated success manager",
+          "Premium support"
+        ]}
+      />
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-white-50 py-20">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+
+  </div>
+</section>
+
 
 </Layout>

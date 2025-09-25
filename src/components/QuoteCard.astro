@@ -1,0 +1,26 @@
+---
+const { 
+  image = "/images/avatar.jpg", 
+  quote, 
+  author, 
+  role 
+} = Astro.props;
+---
+
+<div class="p-8 bg-white border-l-4 border-gray-200 rounded-r-lg max-w-2xl mx-auto flex flex-col justify-between">
+  <!-- Top: Quote -->
+  <p class="text-lg text-gray-700 italic text-left flex-1">“{quote}”</p>
+
+  <!-- Bottom: Author + Image (right aligned) -->
+  <div class="flex items-center justify-end gap-4 mt-auto">
+    <div class="text-right">
+      <div class="text-gray-900 font-semibold">{author}</div>
+      {role && <div class="text-gray-500 text-sm">{role}</div>}
+    </div>
+    <img 
+      src={image} 
+      alt={author} 
+      class="w-16 h-16 rounded-full object-cover shadow-sm flex-shrink-0"
+    />
+  </div>
+</div>
