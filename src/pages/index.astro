@@ -10,67 +10,39 @@ import VeraTree from "../components/VeraTree.astro";
   <!-- Hero -->
   <section class="bg-gray-50 py-24 text-center">
     <div class="max-w-6xl mx-auto px-4">
-      <h1 class="font-['Raleway'] text-8xl text-gray-600 font-bold">The Power of Big Data...</h1>
+      <h1 class="font-['Raleway'] text-8xl text-gray-800 font-bold">The Power of Big Data...</h1>
       <br><br>
-      <h2 class="text-6xl font-bold text-center text-gray-900 mb-8">Now Available in All Sizes!</h2>
+      <h2 class="text-5xl text-center text-gray-500 mb-8">Now available in all sizes!</h2>
       <br>
       <div class="flex justify-center gap-4">
-        <a href="individuals" class="px-8 py-3 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">For Individuals</a>
-        <a href="teams" class="px-8 py-3 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">For Teams</a>
-        <a href="leaders" class="px-8 py-3 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">For Leaders</a>
+        <a href="individuals" class="px-6 py-2 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">For Individuals</a>
+        <a href="leaders" class="px-6 py-2 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">For Leaders</a>
+        <!--<a href="leaders" class="px-6 py-2 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">For Marketers</a>-->
       </div>
     </div>
   </section>
 
-<section class="bg-white py-24">
+<section class="bg-white-50 py-10">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-      <!-- Left -->
-      <div class="p-2 order-2 md:order-1">
-        <img src="/images/big_data.png" 
-            alt="Big Data illustration" 
-            class="w-[300px] h-auto object-contain mx-auto" />
-        <p class="text-lg text-gray-700 mt-2 text-center">
-          <!-- Optional caption or supporting text -->
-        </p>
-      </div>
-
-      <!-- Middle -->
-      <div class="p-2 order-1 md:order-2">
-          <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">What is <Vera />?</h2>
-          <p class="text-lg text-gray-700"><Vera /> is a Data Engine.  It shrinks down AI, Business Intelligence & Data Management tools so that they can be run locally by anyone.</p>
-      </div>
-
-      <!-- Right -->
-      <div class="p-2 order-3 md:order-3">
-        <img src="/images/lean_data.png" 
-            alt="Lean Data illustration" 
-            class="w-[300px] h-auto object-contain mx-auto" />
-        <p class="text-lg text-gray-700 mt-2 text-center">
-          <!-- Optional caption or supporting text -->
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="bg-gray-50 py-24">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="p-2 order-1 md:order-1">
-        <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">What is <VeraTree />?</h2>
-        <p class="text-lg text-gray-700 mb-8"><VeraTree /> is an extension of <Vera />. It integrates your data into a KnowledgeGraph that sits on top of an already powerful data engine.</p>
-        <p class="text-2xl text-gray-700 mb-8">If <Vera /> makes your data useful, <VeraTree /> makes your data valuable.</p>
+        <p class="text-4xl text-gray-900 text-center mb-8">
+          Phenomenal processing power— itty-bitty living space.
+        </p>
+        <p class="text-2xl text-gray-600 text-center mb-8">
+          <VeraTree /> brings the power of Big Data into a local, ultra-private environment where you're free to chat, explore, create and collaborate without fear of looking over your shoulder.
+          <br><br>
+          Designed for Teams who need data security and Individuals who want privacy.
+        </p>
       </div>
 
       <!-- Right cell (shows second on mobile, second on desktop) -->
       <div class="p-2 order-2 md:order-2">
         <img 
-          src="/images/truealign.png" 
-          alt="TrueAlign" 
+          src="/images/veratree_realistic.png" 
+          alt="VeraTree" 
           class="object-contain" 
-          style="height:100%; width:auto; max-height:280px;" 
+          style="height:100%; width:auto; max-height:500px;" 
         />
       </div>
     </div>
@@ -79,35 +51,37 @@ import VeraTree from "../components/VeraTree.astro";
 
 
 <!-- Features -->
-<section id="features" class="py-24 bg-white">
+<section id="features" class="py-10 bg-white">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">
+    <!--<h2 class="text-4xl font-bold text-center text-gray-900 mb-16">
       Choose your preferred data playground..
-    </h2>
+    </h2>-->
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       
       <!-- Real cards below -->
-      <Card href="/individuals" icon="🗣️" buttonLabel="Learn more">
-        <span slot="title"><VeraTree /> for Individuals</span>
+      <Card href="/individuals" icon="" buttonLabel="Learn more">
+        <span slot="title">Individuals</span>
         <li slot="description">For Individuals who want to integrate their KnowledgeGraphs...</li>
         <li slot="description">Compare your Knowledge Graph with pre-loaded Graphs</li>
         <li slot="description">Solves this Pain Point</li>
       </Card>
 
-      <Card href="/teams" icon="🌱" buttonLabel="Learn more">
-        <span slot="title"><VeraTree /> for Teams</span>
-        <li slot="description">For Teams who...</li>
+      <Card href="/leaders" icon="" buttonLabel="Learn more">
+        <span slot="title">Leaders</span>
+        <li slot="description">Bring your teams into Alignment with AlignmentOps</li>
         <li slot="description">Solves this Pain Point</li>
         <li slot="description">Solves this Pain Point</li>
       </Card>
 
-      <Card href="/leaders" icon="🌳" buttonLabel="Learn more">
-        <span slot="title"><VeraTree /> for Leaders</span>
-        <li slot="description">For Leaders who are...</li>
+      <!--
+      <Card href="/marketer" icon="" buttonLabel="Learn more">
+        <span slot="title">Marketers</span>
+        <li slot="description">For Teams who...</li>
         <li slot="description">Solves this Pain Point</li>
         <li slot="description">Solves this Pain Point</li>
       </Card>
+      -->
 
     </div>
   </div>
