@@ -1,5 +1,6 @@
 ---
 const { 
+  template = "1",
   image = "/images/avatar.jpg", 
   quote, 
   author, 
@@ -7,20 +8,42 @@ const {
 } = Astro.props;
 ---
 
-<div class="p-8 bg-white border-l-4 border-gray-200 rounded-r-lg max-w-2xl mx-auto flex flex-col justify-between">
-  <!-- Top: Quote -->
-  <p class="text-lg text-gray-700 italic text-left flex-1">“{quote}”</p>
+{template === "1" && (
+  <div class="p-8 bg-white border-l-4 border-gray-200 rounded-r-lg max-w-2xl mx-auto flex flex-col justify-between">
+    <!-- Top: Quote -->
+    <p class="text-lg text-gray-700 italic text-left flex-1">"{quote}"</p>
 
-  <!-- Bottom: Author + Image (right aligned) -->
-  <div class="flex items-center justify-end gap-4 mt-auto">
-    <div class="text-right">
-      <div class="text-gray-900 font-semibold">{author}</div>
-      {role && <div class="text-gray-500 text-sm">{role}</div>}
+    <!-- Bottom: Author + Image (right aligned) -->
+    <div class="flex items-center justify-end gap-4 mt-auto">
+      <div class="text-right">
+        <div class="text-gray-900 font-semibold">{author}</div>
+        {role && <div class="text-gray-500 text-sm">{role}</div>}
+      </div>
+      <img 
+        src={image} 
+        alt={author} 
+        class="w-16 h-16 rounded-full object-cover shadow-sm flex-shrink-0"
+      />
     </div>
-    <img 
-      src={image} 
-      alt={author} 
-      class="w-16 h-16 rounded-full object-cover shadow-sm flex-shrink-0"
-    />
   </div>
-</div>
+)}
+
+{template === "2" && (
+  <div class="p-8 bg-gradient-to-br from-gray-50 to-white rounded-lg max-w-2xl mx-auto shadow-sm">
+    <!-- Top: Author + Image (left aligned) -->
+    <div class="flex items-center gap-4 mb-6">
+      <img 
+        src={image} 
+        alt={author} 
+        class="w-14 h-14 rounded-full object-cover shadow-sm flex-shrink-0"
+      />
+      <div>
+        <div class="text-gray-900 font-semibold">{author}</div>
+        {role && <div class="text-gray-500 text-sm">{role}</div>}
+      </div>
+    </div>
+
+    <!-- Bottom: Quote -->
+    <p class="text-lg text-gray-700 italic text-left border-l-4 border-gray-300 pl-4">"{quote}"</p>
+  </div>
+)}
