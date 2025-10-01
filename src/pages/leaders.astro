@@ -79,80 +79,52 @@ import QuoteCard from "../components/QuoteCard.astro";
 </section>
 
 
-<section class="bg-gray-50 py-12">
+<section class="bg-white-50 py-12">
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-4xl font-extrabold text-gray-900 mb-12">Product Features</h2>
 
     <div class="grid grid-cols-1 gap-8">
       <FeatureCard
-        title="Simple Knowledge Graph Exploration"
-        description="Navigate your team and project docs through a semantic Knowledge Graph.  Understand what your teams are thinking and what patterns and processes they are adopting."
+        title="Discover"
+        description="Navigate your team and project docs through a semantic Knowledge Graph.  Understand what your teams are thinking and the patterns and processes they are adopting."
         image="graph.jpg"
       />
 
       <FeatureCard
-        title=""
-        description="Measure how closely your team’s thinking aligns with company strategy over time."
+        title="Lead"
+        description="Set expectations, deadlines, and benchmarks. Assign ownership, align responsibilities, and map internal datasets so leaders have a single source of truth to guide decision-making."
         image="graph.jpg"
       />
 
       <FeatureCard
-        title="Vision Cohesion"
-        description="Measure how closely your team’s thinking aligns with company strategy over time."
+        title="Unify"
+        description="Stay unified across projects, reduce friction, and keep your team moving forward together."
         image="graph.jpg"
       />
 
       <FeatureCard
-        title="Expert Alignment"
-        description="Compare your team’s approach against expert benchmarks and industry best practices."
+        title="Reflect, Rinse & Repeat"
+        description="Measure alignment trends over time. Spot bottlenecks, refine processes, and adapt strategy based on real evidence—so every cycle makes your teams stronger, faster, and more aligned."
         image="graph.jpg"
       />
 
+      <!--
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <QuoteCard
-        quote="Not finance. Not strategy. Not technology. It is teamwork that remains the ultimate competitive advantage."
-        author="Patrick Lencioni"
-        role="Author, The Five Dysfunctions of a Team"
-        image="/images/lencioni.png"
+        quote="It is better to lead from behind and to put others in front...especially when you celebrate victory.  Take the front line when there is danger. Then people will appreciate your leadership."
+        author="Nelson Mandela"
+        role="Former President of South Africa, Anti-Apartheid Leader"
+        image="/images/mandela.png"
       />
-
       <QuoteCard
-        quote="Organizations learn only through individuals who learn. But individual learning does not guarantee organizational learning. Without integration, it is only potential."
-        author="Peter Senge"
-        role="Author, The Fifth Discipline"
-        image="/images/senge.png"
+        quote="Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results."
+        author="Andrew Carnegie"
+        role="Industrialist and Philanthropist"
+        image="/images/carnegie.png"
       />
-    </div>
+      </div>
+      -->
 
-    <FeatureCard
-        title="Influence Pathways"
-        description="Identify whose ideas consistently guide and shape the broader conversation."
-        image="graph.jpg"
-      />
-
-      <FeatureCard
-        title="Idea Development"
-        description="Watch early concepts evolve into refined, connected, and actionable insights."
-        image="graph.jpg"
-      />
-
-      <FeatureCard
-        title="Engagement Signals"
-        description="Spot patterns of contribution to understand who is driving progress."
-        image="graph.jpg"
-      />
-
-      <FeatureCard
-        title="Sentiment Trends"
-        description="Reveal optimism, concerns, and friction as they flow through your projects."
-        image="graph.jpg"
-      />
-
-      <FeatureCard
-        title="Risk Indicators"
-        description="Quickly detect misaligned efforts that may stall execution."
-        image="graph.jpg"
-      />
     </div>
   </div>
 </section>
@@ -184,7 +156,7 @@ import QuoteCard from "../components/QuoteCard.astro";
       <PriceCard
         title="Medium Box"
         description="For growing teams that need more power and flexibility."
-        price="$9999"
+        price="$4999"
         features={[
           "Unlimited projects",
           "Advanced analytics",
@@ -196,7 +168,7 @@ import QuoteCard from "../components/QuoteCard.astro";
       <PriceCard
         title="Large Box"
         description="For enterprises needing scalability and dedicated support."
-        price="$9999"
+        price="$6999"
         features={[
           "Custom integrations",
           "Dedicated success manager",
@@ -207,12 +179,46 @@ import QuoteCard from "../components/QuoteCard.astro";
   </div>
 </section>
 
+<section id="waitlist" class="bg-white-50 py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">
+      Join The Waitlist!
+    </h2>
 
-<section class="bg-white-50 py-20">
-  <div class="max-w-6xl mx-auto px-6 text-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <!-- Left cell -->
+      <div class="pt-20 pl-10 pr-6 pb-8">
+        <h2 class="text-6xl font-bold text-gray-800">
+          Skip the line.
+        </h2>
+        <p class="mt-4 text-gray-600">
+          If you want to skip to the front, we'd love to talk.  Please use the calendar below to set an appointment.
+        </p>
+        <h2 class="text-8xl font-bold text-gray-800">
+          ↓
+        </h2>
+      </div>
+
+      <!-- Right cell -->
+      <div>
+        <script
+          type="text/javascript"
+          class="encharge-form-embed-script"
+          src="https://resources-app.encharge.io/embed-production.min.js"
+        ></script>
+        <div
+          class="encharge-form-embed"
+          data-encharge-form-id="15de90f5-0492-4334-a4b2-40ab5536a3c8"
+        ></div>
+      </div>
+    </div>
+
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/sarah-veratree/30min" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
 
   </div>
 </section>
-
 
 </Layout>
