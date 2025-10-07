@@ -70,36 +70,54 @@ import QuoteCard from "../components/QuoteCard.astro";
 <section class="bg-gray-50 py-10">
   <div class="max-w-6xl mx-auto px-6 text-left relative px-10">
     <h2 class="text-4xl font-extrabold text-gray-900 mb-4">How it works?</h2>
-    <p class="text-l text-gray-700 mb-4">• Data — <VeraTree /> turns your team’s documentation, tickets, and other operational data into a clear snapshot of your project.</p>
-    <p class="text-l text-gray-700 mb-4">• UI— manage tasks, ask questions, and monitor KPIs in near real time.  Explore alignment across time and at mulitple resolutions: idea, project, team or org.</p>
-    <p class="text-l text-gray-700 mb-4">• KPIs — Watch projects move forward and let the data verify when milestones are truly reached.</p>
-    <p class="text-l text-gray-700 mb-4">• Alerts— get notified when thresholds are passed or progress is stalled.</p>
-    <p class="text-l text-gray-700 mb-4">• Analytics— Measure alignment trends over time, uncover bottlenecks, and identify the drivers of project success or failure.</p>
+    <div class="pl-4 pt-2">
+      <p class="text-l text-gray-700 mb-4"><span class="font-bold">Data —</span> <VeraTree /> turns your team’s documentation, tickets, and other operational data into a clear snapshot of your project.</p>
+      <p class="text-l text-gray-700 mb-4"><span class="font-bold">UI —</span> manage tasks, ask questions, and monitor KPIs in near real time. Explore alignment across time and at multiple resolutions: idea, project, team or org.</p>
+      <p class="text-l text-gray-700 mb-4"><span class="font-bold">KPIs —</span> Watch projects move forward and let the data verify when milestones are truly reached.</p>
+      <p class="text-l text-gray-700 mb-4"><span class="font-bold">Alerts —</span> get notified when thresholds are passed or progress is stalled.</p>
+      <p class="text-l text-gray-700 mb-4"><span class="font-bold">Analytics —</span> Measure alignment trends over time, uncover bottlenecks, and identify the drivers of project success or failure.</p>
+    </div>
   </div>
 </section>
 
 
 <section class="bg-white-50 py-12">
   <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-extrabold text-gray-900 mb-12">Product Features</h2>
-
+    <h2 class="text-4xl font-extrabold text-gray-900 mb-6">Features</h2>
+    <p class="text-xl text-gray-700 mb-6">AlignmentOps connects directly to your existing work tools—ticketing systems, documentation platforms, and more—so your data stays perfectly in sync. No manual updates. No busywork. Just alignment that runs itself.</p>
     <div class="grid grid-cols-1 gap-8">
+
       <FeatureCard
         title="Discover"
-        description="Navigate your team and project docs through a semantic Knowledge Graph.\n\r\n\rSpot early signs of misalignment and uncover where plans or priorities aren’t in sync."
+        description="Navigate your team and project docs through a semantic Knowledge Graph. Spot early signs of misalignment and uncover where plans or priorities aren’t in sync."
         image="discover.jpg"
+        bullets={[
+          "Traverse your project's knowledge graph",
+          "See how knowledge connects beneath the surface",
+          "Bring order and visibility to your documentation"
+        ]}
       />
 
       <FeatureCard
         title="Lead"
-        description="Set expectations, deadlines, and benchmarks. Assign ownership, align responsibilities, and map internal datasets so leaders have a single source of truth to guide decision-making."
-        image="discover.jpg"
+        description="Set expectations, ownership, deadlines, and benchmarks."
+        image="lead.jpg"
+        bullets={[
+          "Track progress and bottlenecks in real time",
+          "Understand all the forces aligning team members—and pulling them away",
+          "Spot emerging risks before they turn into blockers"
+        ]}
       />
 
       <FeatureCard
         title="Unify"
-        description="Stay unified across projects, reduce friction, and keep your team moving forward together."
-        image="discover.jpg"
+        description="Reduce friction and keep your team moving forward together."
+        image="unify.jpg"
+        bullets={[
+          "Unblock team members",
+          "Surface miscommunications before they escalate",
+          "Turn friction points into training opportunities"
+        ]}
       />
 
       <FeatureCard
