@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Product from '../components/Product.astro';
 import Vera from "../components/Vera.astro";
 import VeraTree from "../components/VeraTree.astro";
 ---
@@ -17,9 +17,9 @@ import VeraTree from "../components/VeraTree.astro";
       <h2 class="text-5xl sm:text-3xl md:text-4xl text-center text-gray-500 mb-8">Now available in all sizes!</h2>
       <br>
       <div class="flex justify-center gap-4">
-        <a href="leaders" class="px-6 py-2 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">For Leaders</a>
-        <a href="individuals" class="px-6 py-2 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">For Individuals</a>
-        <!--<a href="leaders" class="px-6 py-2 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">For Marketers</a>-->
+        <a href="#teams" class="px-6 py-2 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">Teams</a>
+        <a href="#individuals" class="px-6 py-2 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">Individuals</a>
+        <!--<a href="leaders" class="px-6 py-2 bg-gray-200 text-gray-800 text-lg rounded-lg hover:bg-gray-300 transition">Marketers</a>-->
       </div>
     </div>
   </section>
@@ -51,43 +51,75 @@ import VeraTree from "../components/VeraTree.astro";
   </div>
 </section>
 
-
 <!-- Features -->
-<section id="features" class="py-10 bg-white">
+<section id="features" class="py-16 bg-white">
   <div class="max-w-6xl mx-auto px-6">
-    <!--<h2 class="text-4xl font-bold text-center text-gray-900 mb-16">
-      Choose your preferred data playground..
-    </h2>-->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      
-      <!-- Real cards below -->
-      <Card href="/leaders" icon="" buttonLabel="Learn more">
-        <span slot="title">Leaders</span>
-        <li slot="description">Align your team around shared goals.</li>
-        <li slot="description">Spot friction early and keep projects on track.</li>
-        <li slot="description">Track alignment trends to boost performance.</li>
-        <li slot="description">Strengthen resilience through continuous feedback.</li>
-      </Card>
+      <!-- Teams -->
+      <div class="md:pr-8">
+        <h2 id="teams" class="text-4xl text-gray-900 mb-10 tracking-tight">Teams</h2>
 
-      <Card href="/individuals" icon="" buttonLabel="Learn more">
-        <span slot="title">Individuals</span>
-        <li slot="description">Fully Private LLM Chat Experience</li>
-        <li slot="description">Use our LLM or connect your own — it’s completely yours.</li>
-        <li slot="description">Create and manage private projects in your own workspace.</li>
-      </Card>
+        <div class="space-y-8">
+          <Product
+            product_name="AlignmentOps"
+            product_link="/alignmentops"
+            product_bullets={[
+              "Align your team around shared goals.",
+              "Spot friction early and keep projects on track.",
+              "Track alignment trends to boost performance.",
+              "Strengthen resilience through continuous feedback."
+            ]}
+          />
 
-      <!--
-      <Card href="/marketer" icon="" buttonLabel="Learn more">
-        <span slot="title">Marketers</span>
-        <li slot="description">For Teams who...</li>
-        <li slot="description">Solves this Pain Point</li>
-        <li slot="description">Solves this Pain Point</li>
-      </Card>
-      -->
+          <Product
+            product_name="Lakehouse"
+            product_link="/lakehouse"
+            product_bullets={[
+              "An Enterprise-grade Data Stack",
+              "500+ data connectors",
+              "Open-source first approach",
+              "Flat-rate billing",
+            ]}
+            coming_soon=True
+          />
+        </div>
+      </div>
+
+      <!-- Individuals -->
+      <div class="md:pl-8">
+        <h2 id="individuals" class="text-4xl text-gray-900 mb-10 tracking-tight mt-12 md:mt-0">Individuals</h2>
+
+        <div class="space-y-8">
+
+          <Product
+            product_name="Private LLM"
+            product_link="/private_llm"
+            product_bullets={[
+              "Fully Private LLM Chat Experience",
+              "Use our LLM or connect your own — it’s completely yours.",
+              "Create and manage private projects in your own workspace."
+            ]}
+          />
+
+          <Product
+            product_name="Integration"
+            product_link="/integration"
+            product_bullets={[
+              "A guided Jungian system for self-integration",
+              "Explore your patterns, symbols, and shadow",
+              "Track inner dialogue and recurring archetypes",
+              "Bridge unconscious insights with conscious goals"
+            ]}
+            coming_soon=True
+          />
+
+        </div>
+      </div>
 
     </div>
   </div>
 </section>
+
 
 </Layout>

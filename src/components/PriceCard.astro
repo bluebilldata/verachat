@@ -15,18 +15,33 @@ const {
   <h3 class="text-2xl font-bold text-gray-900 mb-2">{title}</h3>
   <p class="text-gray-600 mb-6">{description}</p>
 
-  <!-- Price with strikethrough -->
-  <nobr><span class="text-4xl font-extrabold text-gray-400 mb-1 line-through">
-    {price}</span><span class="text-lg font-medium text-gray-400"> {period}</span></nobr>
+  <nobr>
+    <span class="text-4xl font-extrabold text-gray-400 mb-1 line-through">
+      {price}
+    </span>
+    <span class="text-lg font-medium text-gray-400"> {period}</span>
+  </nobr>
   <p class="text-sm text-gray-600 italic mb-6">Ask About Being a Beta</p>
 
   <ul class="text-gray-600 mb-6 space-y-2 flex-1">
     {features.map((f) => (
-      <li>✔ {f}</li>
+      <li>
+        ✔{" "}
+        {f.includes("$999 set up fee") ? (
+          <span>
+            <span class="line-through text-gray-400">$999 set up fee</span> not for betas!
+          </span>
+        ) : (
+          f
+        )}
+      </li>
     ))}
   </ul>
 
-  <a href="#waitlist" class="mt-auto px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-700 transition">
+  <a
+    href="#waitlist"
+    class="mt-auto px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-700 transition"
+  >
     Join the Waitlist
   </a>
 </div>

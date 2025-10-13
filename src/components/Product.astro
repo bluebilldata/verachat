@@ -1,0 +1,41 @@
+---
+// Props: product_name, product_bullets, product_link, coming_soon
+export interface Props {
+  product_name: string;
+  product_bullets: string[];
+  product_link: string;
+  coming_soon?: boolean;
+}
+
+const { product_name, product_bullets, product_link, coming_soon = false } = Astro.props;
+---
+
+{!coming_soon ? (
+  <a href={product_link} class="block p-6 border rounded-lg shadow-sm hover:shadow-md transition hover:-translate-y-1 hover:bg-gray-50 flex flex-col justify-between">
+    <div>
+      <h3 class="text-2xl font-bold text-gray-900 mb-3">{product_name}</h3>
+      <ul class="list-disc list-inside text-gray-600 space-y-2">
+        {product_bullets.map(bullet => <li>{bullet}</li>)}
+      </ul>
+    </div>
+    <div class="flex justify-end mt-4">
+      <span class="inline-block px-5 py-2 text-sm font-semibold rounded-full bg-black text-white hover:bg-gray-800 transition">
+        Learn more
+      </span>
+    </div>
+  </a>
+) : (
+  <div class="block p-6 border rounded-lg shadow-sm flex flex-col justify-between opacity-70 cursor-not-allowed bg-gray-50">
+    <div>
+      <h3 class="text-2xl font-bold text-gray-900 mb-3">{product_name}</h3>
+      <ul class="list-disc list-inside text-gray-600 space-y-2">
+        {product_bullets.map(bullet => <li>{bullet}</li>)}
+      </ul>
+    </div>
+    <div class="flex justify-end mt-4">
+      <span class="inline-block px-5 py-2 text-sm font-semibold rounded-full bg-gray-300 text-gray-600">
+        Coming soon
+      </span>
+    </div>
+  </div>
+)}
