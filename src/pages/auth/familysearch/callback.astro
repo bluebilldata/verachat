@@ -1,0 +1,35 @@
+---
+const code = Astro.url.searchParams.get('code');
+const state = Astro.url.searchParams.get('state');
+
+if (!code) {
+  return Astro.redirect('/auth/error?message=No authorization code received');
+}
+
+// Exchange code for access token
+const tokenResponse = await fetch('https://ident.familysearch.org/cis-web/oauth2/v3/token', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded',
+  },
+  body: new URLSearchParams({
+    grant_type: 'authorization_code',
+    code: code,
+    redirect_uri: 'https://veratree.io/auth/familysearch/callback',
+    client_id: import.meta.env.FAMILYSEARCH_CLIENT_ID,
+  }),
+});
+
+const tokenData = await tokenResponse.json();
+console.log('Token response:', tokenData);
+---
+
+<html>
+<head>
+  <title>Authenticating...</title>
+</head>
+<body>
+  <p>Authentication successful! Token: {tokenData.access_token?.substring(0, 20)}...</p>
+  <p>Authentication successful! Token: {tokenData.access_token}...</p>
+</body>
+</html>
